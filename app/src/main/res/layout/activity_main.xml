@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nisarg.scarnesdice.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Score : 0"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Score : 0"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv2"
+        android:layout_below="@+id/tv1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn Score : 0"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv3"
+        android:layout_below="@+id/i1"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dice1"
+        android:id="@+id/i1"
+        android:layout_below="@+id/tv2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROLL"
+        android:id="@+id/btn1"
+        android:layout_below="@id/tv3"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onRoll"
+        android:layout_marginStart="50dp"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/WinnerTv"
+        android:layout_centerHorizontal="true"
+        android:onClick="onHold"
+        android:text="HOLD" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/WinnerTv"
+        android:layout_alignEnd="@+id/WinnerTv"
+        android:layout_marginEnd="11dp"
+        android:onClick="onReset"
+        android:text="RESET" />
+
+    <TextView
+        android:id="@+id/WinnerTv"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btn1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        android:textAlignment="center"/>
+
+
+
+</RelativeLayout>
